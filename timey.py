@@ -20,11 +20,13 @@ def checkImage():
         minNeighbors=3,
         minSize=(30, 30)
     )
+    '''
     for (x , y , w , h) in faces:
         cv2.rectangle(image, (x, y), (x + w, y + h), (0, 255, 0), 2)
         roi_color = image[y:y + h, x:x + w] 
         print("[INFO] Object found. Saving locally.") 
         cv2.imwrite(str(w) + str(h) + '_faces.jpg', roi_color) 
+	'''
 
     if len(faces) > 0:
         return {
